@@ -105,8 +105,8 @@ export async function registerServiceWorker() {
   }
 
   try {
-    // Gunakan path relatif agar kompatibel di GitHub Pages
-    const registration = await navigator.serviceWorker.register('./sw.bundle.js');
+    // Daftarkan SW di path relatif terhadap index.html (tanpa slash di depan)
+    const registration = await navigator.serviceWorker.register('/storyapp/sw.bundle.js');
     console.log('Service worker telah terpasang', registration);
   } catch (error) {
     console.error('Failed to install service worker:', error);
