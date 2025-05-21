@@ -1,0 +1,115 @@
+{
+  "id": "/?source=pwa#/",
+  "scope": "/",
+  "start_url": "/?source=pwa#/",
+  "name": "Story App",
+  "short_name": "StoryApp",
+  "description": "Aplikasi Story App memungkinkan pengguna untuk berbagi cerita, pengalaman, dan momen penting dalam kehidupan mereka dengan mudah dan menyenangkan. Dengan fitur interaktif dan desain yang user-friendly, pengguna dapat terhubung, menginspirasi, dan berbagi kisah mereka kepada komunitas secara realtime.",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "images/icons/icon-x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icons/maskable-icon-x48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/icons/maskable-icon-x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/icons/maskable-icon-x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/icons/maskable-icon-x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/icons/maskable-icon-x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshots/StoryApp_001.png",
+      "sizes": "1920x1043",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshots/StoryApp_002.png",
+      "sizes": "1920x1043",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshots/StoryApp_003.png",
+      "sizes": "1920x1043",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshots/StoryApp_004.png",
+      "sizes": "1080x2280",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "images/screenshots/StoryApp_005.png",
+      "sizes": "1080x2280",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "images/screenshots/StoryApp_006.png",
+      "sizes": "1080x2280",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cerita Baru",
+      "short_name": "Baru",
+      "description": "Membuat laporan kerusakan baru.",
+      "url": "/?source=pwa#/new",
+      "icons": [
+        {
+          "src": "images/icons/add-x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Cerita Tersimpan",
+      "short_name": "Tersimpan",
+      "description": "Lihat daftar cerita tersimpan.",
+      "url": "/?source=pwa#/bookmark",
+      "icons": [
+        {
+          "src": "images/icons/bookmark-x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    }
+  ]
+}
