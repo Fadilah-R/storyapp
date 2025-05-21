@@ -1,2 +1,4 @@
 APP_URL=<http://localhost:9001>
 MAP_SERVICE_API_KEY=<TrPnKLNb9QlnDpScez0a>
+
+Link deploy = <https://fadilah-r.github.io/storyapp>
