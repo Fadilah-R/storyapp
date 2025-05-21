@@ -1,0 +1,53 @@
+/* Story Detail Actions Section */
+.report-detail__body__actions__container {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.report-detail__body__actions__container h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.report-detail__actions__buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#save-actions-container {
+  display: flex;
+  align-items: center;
+}
+
+#notify-me-actions-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn.btn-transparent {
+  background: transparent;
+  border: 1px solid #ff9800;
+  color: #ff9800;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn.btn-transparent:hover,
+.btn.btn-transparent:focus {
+  background: #ff9800;
+  color: #fff;
+  outline: none;
+}
