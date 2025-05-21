@@ -1,6 +1,4 @@
-import Map from '../utils/map';
- 
-export async function storyMapper(story) {
+ export async function storyMapper(story) {
   return {
     ...story,
     location: {

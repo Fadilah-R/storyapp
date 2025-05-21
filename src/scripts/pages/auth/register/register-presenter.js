@@ -10,7 +10,6 @@ export default class RegisterPresenter {
   async getRegistered({ name, email, password }) {
     this.#view.showSubmitLoadingButton();
     try {
-      // Validasi password
       if (password.length < 8) {
         this.#view.registeredFailed("Password must be at least 8 characters long.");
         return;
@@ -18,16 +17,14 @@ export default class RegisterPresenter {
 
       const response = await this.#model.getRegistered({ name, email, password });
 
-      console.log('Register response:', response); // Tambahkan log untuk respons
+      console.log('Register response:', response); 
 
-      // Periksa apakah ada kesalahan dalam respons
       if (response.error) {
         console.error('getRegistered: response:', response);
         this.#view.registeredFailed(response.message);
         return;
       }
 
-      // Jika registrasi berhasil
       this.#view.registeredSuccessfully(response.message);
     } catch (error) {
       console.error('getRegistered: error:', error);

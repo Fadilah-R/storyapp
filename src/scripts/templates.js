@@ -193,3 +193,13 @@ export function generateStoryListEmptyTemplate() {
     </div>
   `;
 }
+
+export function generateNotFoundTemplate() {
+  return `
+    <section class="container not-found-container">
+      <h1 class="section-title">404 - Halaman Tidak Ditemukan</h1>
+      <p>Maaf, halaman yang Anda cari tidak tersedia.</p>
+      <a href="#/" class="btn">Kembali ke Beranda</a>
+    </section>
+  `;
+}

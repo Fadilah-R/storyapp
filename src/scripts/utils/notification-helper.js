@@ -87,7 +87,6 @@ export async function unsubscribe() {
   try {
     const pushSubscription = await getPushSubscription();
 
-
     const { endpoint, keys } = pushSubscription.toJSON();
     const response = await unsubscribePushNotification({ endpoint });
 

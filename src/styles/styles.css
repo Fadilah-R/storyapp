@@ -882,3 +882,22 @@ footer {
 .copyright {
   text-align: center;
 }
+
+/* Not Found Page */
+.not-found-container {
+  text-align: center;
+  padding: 80px 16px 120px 16px;
+}
+.not-found-container .section-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.not-found-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+.not-found-container .btn {
+  font-size: 1rem;
+  padding: 0.7rem 2.2rem;
+}

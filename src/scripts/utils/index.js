@@ -105,7 +105,6 @@ export async function registerServiceWorker() {
   }
 
   try {
-    // Daftarkan SW di path relatif terhadap index.html (tanpa slash di depan)
     const registration = await navigator.serviceWorker.register('storyapp/sw.bundle.js');
     console.log('Service worker telah terpasang', registration);
   } catch (error) {

@@ -108,17 +108,22 @@ export default class App {
 
   async renderPage() {
     const url = getActiveRoute();
-    console.log('url', url);
     const route = routes[url];
-    console.log('route', route);
 
     // Get page instance
-    const page = route();
+    let page;
+    if (route) {
+      page = route();
+    } else {
+      // Jika route tidak ditemukan, tampilkan Not Found
+      const { generateNotFoundTemplate } = await import('../templates');
+      this.#content.innerHTML = generateNotFoundTemplate();
+      return;
+    }
 
     const transition = transitionHelper({
       updateDOM: async () => {
         this.#content.innerHTML = await page.render();
-        console.log('isi halaman', await page.render());
         page.afterRender();
       },
     });
@@ -127,8 +132,6 @@ export default class App {
     transition.updateCallbackDone.then(() => {
       scrollTo({ top: 0, behavior: 'instant' });
       this.#setupNavigationList();
-
-      // Pastikan push notification setup setelah navlist selesai di-render
       if (isServiceWorkerAvailable()) {
         setTimeout(() => {
           this.#setupPushNotification();

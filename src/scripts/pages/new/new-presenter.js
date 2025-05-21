@@ -20,16 +20,13 @@ export default class NewPresenter {
 
   async postNewStory({ title, description, evidenceImages, latitude, longitude }) {
     try {
-      // Ambil hanya foto pertama (jika ada)
       let photo = null;
       if (evidenceImages && evidenceImages.length > 0) {
         photo = evidenceImages[0];
       }
      
 
-      // Pastikan photo adalah File/Blob
       if (photo && photo instanceof Blob && photo.name === undefined) {
-        // Jika Blob tanpa .name, buat File agar FormData mengenali sebagai file
         photo = new File([photo], 'photo.jpg', { type: photo.type || 'image/jpeg' });
       }
       const response = await this.#model.storeNewStory({
@@ -45,7 +42,6 @@ export default class NewPresenter {
       }
       this.#view.storeSuccessfully(response.message || 'Cerita berhasil disimpan.');
     } catch (error) {
-      // Jika offline, simpan ke IndexedDB untuk antrian upload
       if (!navigator.onLine) {
         try {
           const offlineStory = {
